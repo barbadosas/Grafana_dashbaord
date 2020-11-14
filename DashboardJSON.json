@@ -53,7 +53,7 @@
   "gnetId": 10578,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1605345945835,
+  "iteration": 1605345945841,
   "links": [],
   "panels": [
     {
@@ -69,6 +69,107 @@
       "repeat": null,
       "title": "Quick overview",
       "type": "row"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(53, 142, 29, 0.87)",
+        "#FA6400",
+        "#C4162A"
+      ],
+      "datasource": "${DS_INFLUXDB}",
+      "decimals": 1,
+      "editable": true,
+      "error": false,
+      "format": "celsius",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 0,
+        "y": 1
+      },
+      "height": "150",
+      "id": 61997,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(13, 38, 130, 0.45)",
+        "full": false,
+        "lineColor": "#0a50a1",
+        "show": true
+      },
+      "tableColumn": "last",
+      "targets": [
+        {
+          "dsType": "influxdb",
+          "groupBy": [],
+          "measurement": "rpi_temp",
+          "orderByTime": "ASC",
+          "policy": "autogen",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "75,85",
+      "title": "CPU Temperature",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -94,7 +195,7 @@
       "gridPos": {
         "h": 4,
         "w": 2,
-        "x": 0,
+        "x": 6,
         "y": 1
       },
       "height": "150",
@@ -193,107 +294,6 @@
     },
     {
       "cacheTimeout": null,
-      "colorBackground": true,
-      "colorPostfix": false,
-      "colorPrefix": false,
-      "colorValue": false,
-      "colors": [
-        "#508642",
-        "#FA6400",
-        "#C4162A"
-      ],
-      "datasource": "${DS_INFLUXDB}",
-      "decimals": 1,
-      "editable": true,
-      "error": false,
-      "format": "celsius",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 2,
-        "x": 2,
-        "y": 1
-      },
-      "height": "150",
-      "id": 61997,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(207, 250, 255, 0)",
-        "full": false,
-        "lineColor": "#0a50a1",
-        "show": true
-      },
-      "tableColumn": "last",
-      "targets": [
-        {
-          "dsType": "influxdb",
-          "groupBy": [],
-          "measurement": "rpi_temp",
-          "orderByTime": "ASC",
-          "policy": "autogen",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              }
-            ]
-          ],
-          "tags": []
-        }
-      ],
-      "thresholds": "75,85",
-      "title": "CPU Temperature",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
       "colorBackground": false,
       "colorValue": true,
       "colors": [
@@ -315,7 +315,7 @@
       "gridPos": {
         "h": 4,
         "w": 2,
-        "x": 4,
+        "x": 8,
         "y": 1
       },
       "height": "150",
@@ -436,6 +436,7 @@
         "rgba(245, 54, 54, 0.9)"
       ],
       "datasource": "${DS_INFLUXDB}",
+      "decimals": 0,
       "editable": true,
       "error": false,
       "format": "percent",
@@ -449,7 +450,127 @@
       "gridPos": {
         "h": 4,
         "w": 2,
-        "x": 6,
+        "x": 10,
+        "y": 1
+      },
+      "height": "150",
+      "id": 61863,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "dsType": "influxdb",
+          "groupBy": [
+            {
+              "params": [
+                "$interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "swap",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "used_percent"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "host",
+              "operator": "=~",
+              "value": "/^$server$/"
+            }
+          ]
+        }
+      ],
+      "thresholds": "50,70,90",
+      "title": "Swap usage",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": "${DS_INFLUXDB}",
+      "editable": true,
+      "error": false,
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 12,
         "y": 1
       },
       "height": "150",
@@ -559,127 +680,6 @@
       "decimals": 0,
       "editable": true,
       "error": false,
-      "format": "percent",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": true,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 2,
-        "x": 8,
-        "y": 1
-      },
-      "height": "150",
-      "id": 61863,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "dsType": "influxdb",
-          "groupBy": [
-            {
-              "params": [
-                "$interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "swap",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "used_percent"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "host",
-              "operator": "=~",
-              "value": "/^$server$/"
-            }
-          ]
-        }
-      ],
-      "thresholds": "50,70,90",
-      "title": "Swap usage",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorValue": true,
-      "colors": [
-        "rgba(50, 172, 45, 0.97)",
-        "rgba(237, 129, 40, 0.89)",
-        "rgba(245, 54, 54, 0.9)"
-      ],
-      "datasource": "${DS_INFLUXDB}",
-      "decimals": 0,
-      "editable": true,
-      "error": false,
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -691,7 +691,7 @@
       "gridPos": {
         "h": 4,
         "w": 2,
-        "x": 10,
+        "x": 14,
         "y": 1
       },
       "height": "150",
@@ -813,7 +813,7 @@
       "gridPos": {
         "h": 4,
         "w": 2,
-        "x": 12,
+        "x": 16,
         "y": 1
       },
       "height": "150",
@@ -934,7 +934,7 @@
       "gridPos": {
         "h": 4,
         "w": 2,
-        "x": 14,
+        "x": 18,
         "y": 1
       },
       "height": "150",
@@ -1045,133 +1045,6 @@
       "decimals": 0,
       "editable": true,
       "error": false,
-      "format": "percent",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": true,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 2,
-        "x": 16,
-        "y": 1
-      },
-      "height": "150",
-      "id": 61866,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "dsType": "influxdb",
-          "groupBy": [
-            {
-              "params": [
-                "$interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "disk",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "used_percent"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "host",
-              "operator": "=~",
-              "value": "/^$server$/"
-            },
-            {
-              "condition": "AND",
-              "key": "path",
-              "operator": "=",
-              "value": "/"
-            }
-          ]
-        }
-      ],
-      "thresholds": "70,80,90",
-      "title": "RootFS used",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorValue": true,
-      "colors": [
-        "rgba(50, 172, 45, 0.97)",
-        "rgba(237, 129, 40, 0.89)",
-        "rgba(245, 54, 54, 0.9)"
-      ],
-      "datasource": "${DS_INFLUXDB}",
-      "decimals": 0,
-      "editable": true,
-      "error": false,
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -1183,7 +1056,7 @@
       "gridPos": {
         "h": 4,
         "w": 2,
-        "x": 18,
+        "x": 20,
         "y": 1
       },
       "height": "150",
@@ -1305,7 +1178,7 @@
       "gridPos": {
         "h": 4,
         "w": 2,
-        "x": 20,
+        "x": 22,
         "y": 1
       },
       "height": "150",
@@ -3064,5 +2937,5 @@
   "timezone": "browser",
   "title": "Monitor Main",
   "uid": "sF7d-FHZz",
-  "version": 34
+  "version": 36
 }
