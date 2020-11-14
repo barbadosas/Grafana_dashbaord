@@ -8,4 +8,4 @@ Telegraf configs used to capturre CPU temperature with exec command.
 
 # Preview
 
-![alt text](https://github.com/barbadosas/Grafana_dashbaord/blob/main/Preview.PNG)
+![alt text](https://github.com/barbadosas/Grafana_dashbaord/blob/main/Img.PNG)
