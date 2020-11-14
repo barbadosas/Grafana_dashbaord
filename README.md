@@ -1,10 +1,10 @@
 # Grafana_dashbaord
 
-Stripped down monitoring Dashboard for RPI for individual use.
+Stripped down monitoring dashboard for RPI for individual use.
 
 # Telegraf Configs
 
-Telegraf configs used to capturre CPU temperature with exec command.
+Telegraf configs used to capture CPU temperature with exec plugin.
 
 # Preview
 
